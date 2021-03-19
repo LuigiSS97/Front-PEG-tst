@@ -1,0 +1,31 @@
+.sidebar-container {
+    height: 100%;
+    width: 90px;
+    background-color: rgb(231, 235, 247 );
+}
+#brand-logo {
+    box-shadow:  0 2px 7px 0 rgba(0,0,0,0.15);;
+}
+.labels {
+    color: rgb(138, 152, 187);
+    width: 90px;
+    height: inherit;
+    font-size: smaller;
+    text-align: center;
+    word-wrap: break-word;
+}
+.img-icon {
+    width: 90px;
+    height: 22px;
+    position:relative;
+}
+
+.sidebar-buttons {
+    text-align: center;
+    margin: 30px 0px;
+}
+.sidebar-buttons:hover {
+    border-left: solid rgb(39, 147, 255);
+    transition: 0.1s;
+    color: rgb(39, 147, 255);
+}

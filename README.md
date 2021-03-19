@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+[![](/peg-contas.png)]()
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Front end code challenge
+Hello!
 
-## Available Scripts
+Thanks for your interest in joining the team :)
+This is a front end code challenge designed to access the ability of a front-end candidate to create an app using our current technology stack.
 
-In the project directory, you can run:
+We wish you the best of luck!
 
-### `yarn start`
+## Overview 
+Your challenge is to build a vue.js app that reproduce one of ours screen with mocked data. [![](/test-goal.jpg)]()
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Required
+- Implement layout;
+- Use some features of ES6+;
+- Show us your work through your commit history;
+- Use test server data;
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Recommendations
+- Use vue-cli to create your project;
+- All the assets you need is in `/assets/` directory;
+- Use any additional library;
 
-### `yarn test`
+## Bonus
+- Layout responsiveness;
+- Use any CSS preprocessor;
+- Select of activities;
+> You have to change the route when you select a new activity and show at the url the id of this activity. The same when you change the page
+- Filter "Organizar por:";
+> Must have options ["Prioridade(SLA)" and "Receber documentos"]. When you filter by the first option you have to reorganize the card by the highest value in the variable `days`. In the second filter you have to show only the cards with the property `hasPendingDocument = true`
+- Select all;
+> Must select all checks at the cards that the property `hasPendingDocument = false`
+- Use some state managing solution;
+- Unit tests or any other test you think is important.
+- Host the website on the service of your choice;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Evaluation criteria
+- Code organization
+- Code readability
+- Commit history - structure and quality in english
+- Component-based structure
+- Reusable Components
+- Libraries used
+- ES6 features
+- Vue Conventions
 
-### `yarn build`
+## How to run test server
+- Install npm package with terminal command `yarn` or `npm install`
+- Run server with terminal command `yarn server` or `npm run server`
+- Keep the terminal open when you use the test server, it will show you the routes.
+> It's possible to complete the test with routes `/activities` and `/activity/:activityId/cards`, but you can also use: `/activity/:activityId` and `/cards`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Submission instructions
+1. Create a GitHub repository for the test;
+2. Create a new readme file with the instructions to run the project, and add any comments that you think is relevant;
+3. You can make the repository public or enable access for our devs: dsnjunior or edim.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Questions? 
+> If you have any questions, you can create an issue on our repository and we will clear things up for you :)

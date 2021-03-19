@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'MyFont';
+    src: local('MyFont'), url(../../assets/fonts/TitilliumWeb-Regular.ttf) format('woff');
+  }
+h2 {
+    font-family: 'MyFont';
+    color: rgb(26, 41, 79);
+    margin-bottom: 0.5px
+}
+a {
+    font-size: smaller;
+    color: rgb(139, 152, 186);
+}
+.header-container {
+    display: flex;
+    align-content: space-around;
+    margin: 30px 50px;
+    
+}
+.arrow-icon {
+    margin: 35px 25px;
+}
