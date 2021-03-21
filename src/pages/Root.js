@@ -5,12 +5,12 @@ import {
     Route,
     } from "react-router-dom";
   import PEGMyactivities from './PEG/Myactivities/Myactivities'
-
+ 
   const Root = () => {
       return (
           <Router>
               <Switch>
-                  <Route path="/myactivities" component={PEGMyactivities}/>
+                  <Route path="/" component={PEGMyactivities}/>
               </Switch>
           </Router>
       )

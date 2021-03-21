@@ -1,4 +1,0 @@
-{
-  "/activity/:activityId": "/activities?id=:activityId",
-  "/activity/:activityId/cards": "/cards?activityId=:activityId"
-}
