@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'MyFont';
+    src: local('MyFont'), url(../../assets/fonts/TitilliumWeb-Regular.ttf) format('woff');
+  }
+.dropdown-menu {
+    width: 243px;
+    height: 26px;
+    font-family: 'MyFont';
+    color: rgb(26, 41, 79);
+    margin-bottom: 10px;
+}

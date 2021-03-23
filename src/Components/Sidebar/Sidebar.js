@@ -10,7 +10,7 @@ import {ReactComponent as DashboardIcon} from '../../assets/images/dashboard.svg
 
 const Sidebar = () => {
     return (
-         <section className="sidebar-container">
+         <nav className="sidebar-container">
             <BrandIcon id='brand-logo'/>
              <div className='sidebar-buttons'>
                 <ActIcon className='img-icon'/>
@@ -19,17 +19,21 @@ const Sidebar = () => {
              <div className='sidebar-buttons'>
                 <ActIcon className='img-icon'/>
                 <label className='labels'>Todas as contas</label>
-             </div><div className='sidebar-buttons'>
+             </div>
+             <div className='sidebar-buttons'>
                 <UsersIcon className='img-icon'/>
                 <label className='labels'>Usuários</label>
-             </div><div className='sidebar-buttons'>
+             </div>
+             <div className='sidebar-buttons'>
                 <PerformanceIcon className='img-icon'/>
                 <label className='labels'>Desempenho</label>
-             </div><div className='sidebar-buttons'>
+             </div>
+             <div className='sidebar-buttons'>
                 <DashboardIcon className='img-icon'/>
                 <label className='labels'>Dashboard</label>
              </div>
-         </section>
+             
+         </nav>
     )
 }
 

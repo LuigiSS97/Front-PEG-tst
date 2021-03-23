@@ -2,12 +2,9 @@
     font-family: 'MyFont';
     src: local('MyFont'), url(../../assets/fonts/TitilliumWeb-Regular.ttf) format('woff');
   }
-h2 {
-    font-family: 'MyFont';
-    color: rgb(26, 41, 79);
-    margin-bottom: 0.5px
-}
-a {
+
+.subtitle {
+    margin-top: 30px;
     font-size: smaller;
     color: rgb(139, 152, 186);
 }
@@ -15,8 +12,44 @@ a {
     display: flex;
     align-content: space-around;
     margin: 30px 50px;
-    
+    width: 100vh;
 }
 .arrow-icon {
     margin: 35px 25px;
+}
+.labels-container {
+    display: flex;
+    width: 40vh;
+    height: 10vw;
+    margin-left: 300px;
+    margin-top: 10px;
+}
+
+.delayed-label {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: rgb(253,89,88);
+    margin: 8px 5px;
+}
+.warning-label{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: rgb(255,199,52);
+    margin: 8px 5px;
+}
+.good-label {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: rgb(32,191,107);
+    margin: 8px 5px;
+}
+.label-text {
+    margin-right: 30px;
+    font-family: 'MyFont';
+    color: rgb(36, 50, 85);
+    font-weight: bold;
+    margin-left: 2px;
 }

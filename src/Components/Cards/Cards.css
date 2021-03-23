@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'MyFont';
+    src: local('MyFont'), url(../../assets/fonts/TitilliumWeb-Regular.ttf) format('woff');
+}
+@font-face {
+    font-family: 'MyFontBold';
+    src: local('MyFont'), url(../../assets/fonts/TitilliumWeb-Bold.ttf) format('woff');
+  }
+
+.card {
+    background-color: white;
+    box-shadow:  0 2px 7px 0 rgba(0,0,0,0.15); 
+    border: 1px solid rgba(78, 86, 109,0.2);
+    max-width: 320px;
+    max-height: 230px;
+    
+    
+}
+.card-header__container {
+    display: flex;
+    
+}
+.red {
+    background-color: rgb(253, 89, 88);
+}
+
+#card-days {
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 5px 5px 15px;
+    text-align: center;
+    color: white;
+}
+#card-days a {
+    font-size: 11px;
+    font-weight: lighter;
+    font-family: "MyFont";
+}
+#card-days nav {
+    font-family: "MyFont";
+    font-size: 20px;
+}
+.days-red {
+    background-color: rgb(253, 89, 88);
+}
+#patient-data__container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-left: 1px;
+}
+.card-patient {
+    margin: 3px 15px;
+    font-weight: normal;
+    font-size: 18px;
+    font-family: "MyFont";
+}
+
+.card-insurance {
+    font-size: smaller;
+    margin-left: 15px;
+    color: rgb(139, 152, 186);
+}
+.card-checkbox {
+    align-self: flex-end;
+    margin: 10px auto 40px;
+}
+.card-data__container {
+    display: flex;
+    height: 50px;
+    margin-top: 5px;
+    align-content: space-between;
+}
+.card-data__content{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+h5 {
+    margin-top: 3px;
+    font-size: 15px;
+    font-family: "MyFontBold";
+    margin-bottom: 15px;
+}
+.card-data__title {
+    font-size: smaller;
+    color: rgb(139, 152, 186);
+    font-family: 'MyFont';
+}
+.card-value__container {
+    display: flex;
+    background-color: rgb(245,246,250);
+    margin: 3px 10px 10px 10px;
+    border-radius: 5px;
+    height: 50px;
+}
+
+.card-value {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 5px 20px;
+    font-family: 'MyFont';
+
+}
+.card-pendencies {
+    height: 25px;
+    width: 120px;
+    border: 1.5px solid rgb(91, 173, 255);
+    border-radius: 20px;
+    color: rgb(91, 173, 255);
+    font-weight: bold;
+    font-size: small;
+    text-align: center;
+    margin: auto;
+    padding: 1px;
+    font-family: 'MyFontBold';
+}
+
+.footer-container {
+    display: flex;
+    align-content: space-between;
+    margin-bottom: 8px;
+}
+.footer-icons {
+    margin-left: calc(250px - 50%);
+    position: relative;
+    display: flex;
+    align-self: flex-end;
+    margin: auto;
+    margin-right: 15px;
+}
+
+.footer-billtags {
+    margin-left: 5px;
+}
+.q-tag, .r-tag {
+    margin: 5px;
+    border: solid 2px rgb(78, 86, 109);
+    border-radius: 50%;
+    color: rgb(78, 86, 109);
+    width: 10px;
+    height: 10px;
+    font-weight: bold;
+    padding: 0.5px 5px 2px 5px;
+    font-size: 12px;
+}

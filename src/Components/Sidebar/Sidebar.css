@@ -4,7 +4,7 @@
     background-color: rgb(231, 235, 247 );
 }
 #brand-logo {
-    box-shadow:  0 2px 7px 0 rgba(0,0,0,0.15);;
+    box-shadow:  0 2px 7px 0 rgba(0,0,0,0.15);
 }
 .labels {
     color: rgb(138, 152, 187);
@@ -28,4 +28,12 @@
     border-left: solid rgb(39, 147, 255);
     transition: 0.1s;
     color: rgb(39, 147, 255);
+    
+}
+.sidebar-buttons:hover label {
+    color: rgb(39, 147, 255);
+
+}
+.sidebar-buttons:hover svg path {
+    fill:  rgb(39, 147, 255);
 }
