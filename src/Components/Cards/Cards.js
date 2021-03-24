@@ -18,69 +18,57 @@ const Cards = ({card}) => {
       return "yellow"
     }
     if(status === "GOOD"){
-      return "red"
+      return "green"
     }
   }
   return (
       <div className="card">
       <section className="card-body">
+        
         <div className="card-header__container">
+          
           <span id="card-days" className={getClass(card.status)}>
-            <nav>{card.days}</nav>
-            <a>
+            <span className="card-days__number">{card.days}</span>
+            <span className="card-days__word">
               Dias
-            </a>
+            </span>
           </span>
-          <div id="patient-data__container">
-            <h4 className="card-patient">{card.patientName}</h4>
-            <a className="card-insurance">{card.healthInsurance }</a>
-          </div>
-          <input type="checkbox" className="card-checkbox"/>
-        </div>
-          <div className="card-data__container">
-            <div className="card-data__content">
-              <a className="card-data__title">Conta</a>
-              <h5>{card.billSources
-                .filter(account => account.label === "Conta")
-                .map(ac => ac.value
-                )}
-              </h5>
+          
+          <div className="card-header__container2">
+            <div id="patient-data__container">
+              <h4 className="card-patient">{card.patientName}</h4>
+              <span className="card-insurance">{card.healthInsurance }</span>
+              
             </div>
-            <div className="card-data__content">
-                <a className="card-data__title">Atend.</a>
-                <h5>{card.billSources
-                  .filter(atend => atend.label === "Atend.")
-                  .map(at => at.value
-                  )}
-                </h5>
-              </div>
-              <div className="card-data__content">
-                <a className="card-data__title">Remessa</a>
-                <h5>{card.billSources
-                  .filter(shipping => shipping.label === "Remessa")
-                  .map(rm => rm.value
-                  )}
-                </h5>
-              </div>
-              <div className="card-data__content">
-                <a className="card-data__title">Lote</a>
-                <h5>{card.billSources
-                  .filter(batch => batch.label === "Lote")
-                  .map(bt => bt.value
-                  )}</h5>
-              </div>
+            <input type="checkbox" className="card-checkbox"/>
           </div>
-          <div className="card-value__container">
+       
+        </div>
+        
+        <div className="card-data__container">
+            
+            {card.billSources.map( billSource =>
+              <div className="card-data__content">
+              <span className="card-data__title">{billSource.label}</span>
+              <h5>{billSource.value}</h5>
+            </div>)}
+        </div>
+        
+        <div className="card-value__container">
             <h2 className="card-value">R$ {card.value}</h2>
-            <span className="card-pendencies">{card.pendencies}pendências</span>
+            <span className="card-pendencies"><span className="pendencies-value">
+              {card.pendencies}
+            </span>pendências</span>
           </div>
+      
       </section>
+      
       <footer>
         <div className="footer-container">
           <div className="footer-billtags">
-            {billTypes.includes("Q") &&(<a className="q-tag">Q</a>)}
-            {billTypes.includes("R") &&(<a className="r-tag">R</a>)}
+            {billTypes.map( billType =>(<span className="tag">{billType}</span>))}
           </div>
+          
           <div className="footer-icons">
             {attachment &&(<AttachmentIcon/>)}
             {hasPendingDocs ? <DocumentPendedIcon/> : <DocumentIcon/>}

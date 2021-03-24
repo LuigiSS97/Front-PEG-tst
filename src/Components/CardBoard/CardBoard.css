@@ -1,0 +1,11 @@
+
+.cardboard-body{
+    width:calc(100vh - 90px);
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding-left: 20px;
+    padding-top: 24px;
+    grid-gap: 1.9rem;
+    margin: 60px;
+}

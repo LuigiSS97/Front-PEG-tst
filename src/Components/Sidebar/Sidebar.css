@@ -28,6 +28,7 @@
     border-left: solid rgb(39, 147, 255);
     transition: 0.1s;
     color: rgb(39, 147, 255);
+    cursor: pointer;
     
 }
 .sidebar-buttons:hover label {

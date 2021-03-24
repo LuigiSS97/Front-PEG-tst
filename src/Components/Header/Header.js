@@ -5,12 +5,12 @@ import DropdownMenu from '../Dropdown/Dropdown';
 import axios from 'axios';
 
 const Header = () => {
-  const [cards,setCards] = useState([])
+  const [cards,setCards] = useState([]);
   const [counts,setCounts] = useState({
     delayed: 0,
     warning: 0,
     good:0
-  })
+  });
 
   useEffect(() => {
     axios.get('http://localhost:5000/cards')
@@ -31,24 +31,42 @@ const Header = () => {
     
     <div className='header-container'>
       <section>
-          <DropdownMenu/>
-          <a className="subtitle">Auditar Conta</a>
+          <DropdownMenu className="dropdown-menu"/>
+          <span className="subtitle">Auditar Conta</span>
       </section>
-      <ArrowIcon className='arrow-icon'/>
+      
       <section className="labels-container">
-       <>
-        <label className='delayed-label'/>
-        {counts.delayed}<a className="label-text">cards</a>
-       </>
+       <div className="delayed-total__block">        
+          <div className="delayed-components">
+            <span className="delayed-label"/>
+            <span className="label-text__number">
+              {counts.delayed}
+            </span>
+            <span className="label-text">cards</span>
+          </div>
+          
+          
+          <div className="labels-container__total">
+            <span className="total-text">Total:</span> 
+            {<span className="counts-text">
+              {counts.good + counts.warning + counts.delayed}
+              </span>}  
+            <span className="counts-text">contas</span>
+          </div>
+       
+       </div>
+       
        <>
         <label className='warning-label'/> 
-        {counts.warning}<a className="label-text">cards</a>
+        <span>{counts.warning}</span><span className="label-text">cards</span>
        </> 
+       
        <>
         <label className='good-label'/> 
         {counts.good}<a className="label-text">cards</a>
        </>
-       </section>
+       
+      </section>
     </div>
   );
 }

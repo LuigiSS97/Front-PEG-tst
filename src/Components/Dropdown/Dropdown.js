@@ -17,7 +17,9 @@ const DropdownMenu = () => {
   return (
     <div>
       {activities.length && (<>
-    <Dropdown  className="dropdown-menu" value={activities[0].name} options={activities.map(activity => <a>{activity.name}</a>)} arrowClosed={<ArrowIcon/>}/></>)}
+    <Dropdown  className="dropdown-menu" value={activities[0].name} 
+    options={activities.map(activity => <span>{activity.name}</span>)} 
+    arrowClosed={<ArrowIcon/>}/></>)}
     </div>
   );
 }

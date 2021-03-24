@@ -1,55 +1,89 @@
 @font-face {
-    font-family: 'MyFont';
-    src: local('MyFont'), url(../../assets/fonts/TitilliumWeb-Regular.ttf) format('woff');
-  }
+  font-family: "MyFont";
+  src: local("MyFont"),
+    url(../../assets/fonts/TitilliumWeb-Regular.ttf) format("woff");
+}
 
 .subtitle {
-    margin-top: 30px;
-    font-size: smaller;
-    color: rgb(139, 152, 186);
+  margin-top: 30px;
+  font-size: smaller;
+  color: rgb(139, 152, 186);
 }
 .header-container {
-    display: flex;
-    align-content: space-around;
-    margin: 30px 50px;
-    width: 100vh;
+  display: flex;
+  align-content: space-around;
+  margin: 30px 50px;
+  width: 100vh;
+  margin-bottom: 10px;
+  height: 80px;
+  padding: 0 30px;
+  align-items: center;
 }
 .arrow-icon {
-    margin: 35px 25px;
+  margin: 35px 25px;
 }
 .labels-container {
-    display: flex;
-    width: 40vh;
-    height: 10vw;
-    margin-left: 300px;
-    margin-top: 10px;
+  display: flex;
+  width: 70vh;
+  height: 40px;
+  justify-content: flex-end;
+  margin-top: 5px;
+}
+.delayed-total__block {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.delayed-components {
+  display: flex;
+}
+.labels-container__total {
+  display: flex;
 }
 
 .delayed-label {
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: rgb(253,89,88);
-    margin: 8px 5px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: rgb(253, 89, 88);
+  margin-top: 8px;
 }
-.warning-label{
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: rgb(255,199,52);
-    margin: 8px 5px;
+.label-text__number {
+  margin-left: 5px;
+}
+.warning-label {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: rgb(255, 199, 52);
+  margin: 8px 5px;
 }
 .good-label {
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: rgb(32,191,107);
-    margin: 8px 5px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: rgb(32, 191, 107);
+  margin: 8px 5px;
 }
 .label-text {
-    margin-right: 30px;
-    font-family: 'MyFont';
-    color: rgb(36, 50, 85);
-    font-weight: bold;
-    margin-left: 2px;
+  margin-right: 30px;
+  font-family: "MyFont";
+  color: rgb(36, 50, 85);
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+.total-text {
+  font-family: "MyFont";
+  font-size: smaller;
+  color: rgb(139, 152, 186);
+}
+.counts-text {
+  font-family: "MyFont";
+  color: rgb(36, 50, 85);
+  font-size: smaller;
+  margin-left: 4px;
+}
+.dropdown-menu:hover {
+  cursor: pointer;
 }
