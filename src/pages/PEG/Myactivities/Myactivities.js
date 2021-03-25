@@ -1,11 +1,10 @@
-import React,{useEffect,useState} from 'react'
+import React from 'react'
 import App from '../../../App'
 
 
 const PEGMyactivities = () => {
 
+  return <App/>
   
-
-    return <App/>
 }
 export default PEGMyactivities;

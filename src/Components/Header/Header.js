@@ -3,43 +3,39 @@ import "./Header.css";
 import DropdownMenu from '../Dropdown/Dropdown';
 import axios from 'axios';
 
-const Header = () => {
-  const [cards,setCards] = useState([]);
-  const [counts,setCounts] = useState({
-    delayed: 0,
-    warning: 0,
-    good:0
-  });
+const Header = (props) => {
+  const [activities,setActivities] = useState([]);
+  const [currentActivity, setCurrentActivity] = useState(0)
+  
+  const updateCurrentActivity = (value) => {
+    setCurrentActivity(value)
+    props.onChangeActivity(activities[value].id)
+  }
 
   useEffect(() => {
-    axios.get('http://localhost:5000/cards')
+    axios.get('http://localhost:5000/activities')
       .then((response) =>{
-        setCards(response.data);
-        const newCountsDelayed = response.data.filter( card => card.status === "DELAYED").length
-        const newCountsWarning = response.data.filter( card => card.status === "WARNING").length
-        const newCountsGood = response.data.filter( card => card.status === "GOOD").length
-        setCounts({
-          delayed : newCountsDelayed,
-          warning : newCountsWarning,
-          good : newCountsGood
-        })
+        setActivities(response.data);
       });
   }, []);
   
+
   return (
     
     <div className='header-container'>
       <section>
-          <DropdownMenu className="dropdown-menu"/>
+          <DropdownMenu activities={activities} onSelectActivity={value => updateCurrentActivity(value)} 
+          className="dropdown-menu"
+          />
           <span className="subtitle">Auditar Conta</span>
       </section>
       
       <section className="labels-container">
-       <div className="delayed-total__block">        
+        <div className="delayed-total__block">        
           <div className="delayed-components">
             <span className="delayed-label"/>
             <span className="label-text__number">
-              {counts.delayed}
+              {activities.length && activities[currentActivity].cardsCount.delayed}
             </span>
             <span className="label-text">cards</span>
           </div>
@@ -48,24 +44,31 @@ const Header = () => {
           <div className="labels-container__total">
             <span className="total-text">Total:</span> 
             {<span className="counts-text">
-              {counts.good + counts.warning + counts.delayed}
+            {activities.length && 
+              activities[currentActivity].cardsCount.good +
+              activities[currentActivity].cardsCount.warning +
+              activities[currentActivity].cardsCount.delayed
+            }
               </span>}  
             <span className="counts-text">contas</span>
           </div>
        
-       </div>
+        </div>
        
-       <>
-        <label className='warning-label'/> 
-        <span>{counts.warning}</span><span className="label-text">cards</span>
-       </> 
-       
-       <>
-        <label className='good-label'/> 
-        {counts.good}<a className="label-text">cards</a>
-       </>
-       
-      </section>
+        <>
+          <label className='warning-label'/> 
+          <span>{activities.length && activities[currentActivity].cardsCount.warning}
+          </span>
+          <span className="label-text">cards</span>
+        </> 
+        
+        <>
+          <label className='good-label'/> 
+          {activities.length && activities[currentActivity].cardsCount.good}
+          <span className="label-text">cards</span>
+        </>
+        </section>
+      
     </div>
   );
 }

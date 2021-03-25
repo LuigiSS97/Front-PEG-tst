@@ -1,27 +1,24 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState} from 'react';
 import './dropdown.css';
-import {ReactComponent as ArrowIcon} from '../../assets/images/arrow.svg';
-import axios from 'axios';
-import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
 
-const DropdownMenu = () => {
-   const [activities,setActivities] = useState([])
-  useEffect(() => {
-    axios.get('http://localhost:5000/activities')
-      .then((response) =>{
-        setActivities(response.data)
-      });
-  }, []);
+const DropdownMenu = (props) => {
+  const [currentValue,setCurrentValue] = useState(0)
+
+  const changeValue = (value) => {
+    props.onSelectActivity(value)
+    setCurrentValue(value)
+  }
   return (
     <div>
-      {activities.length && (<>
-    <Dropdown  className="dropdown-menu" value={activities[0].name} 
-    options={activities.map(activity => <span>{activity.name}</span>)} 
-    arrowClosed={<ArrowIcon/>}/></>)}
+      {props.activities.length && (
+        <select onChange={e => changeValue(e.target.value)}  className="dropdown-menu"   value={currentValue}>
+         {props.activities.map((activity,index) => <option key={activity.id} value={index}>{activity.name}</option>)}
+        </select>
+      )}
     </div>
-  );
+  ); 
 }
 
 export default DropdownMenu;

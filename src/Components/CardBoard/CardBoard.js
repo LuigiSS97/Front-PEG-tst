@@ -5,15 +5,14 @@ import axios from 'axios';
 import Pagination from '../../Pagination';
 
 
-const CardBoard = () => {
+
+const CardBoard = ({currentActivity}) => {
     const [cards,setCards] = useState([]);
-    const [loading, setLoading] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
     const [cardsPerPage] = useState(8)
     
     useEffect(() => {
       const fetchCards = async () => {
-        setLoading(true);
         const res = await axios.get('http://localhost:5000/cards');
         setCards(res.data);
         }  
@@ -21,29 +20,30 @@ const CardBoard = () => {
                   
             
         }, []);
-  //get current posts
+    
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard -  cardsPerPage;
-  const currentCards = cards.slice(indexOfFirstCard, indexOfLastCard)
+  const sortedCards = cards.sort((a, b) => b.days - a.days);
+  const filteredCards = sortedCards.filter(card => card.activityId === currentActivity);
+  const currentCards = filteredCards.slice(indexOfFirstCard, indexOfLastCard);
   
-  //change page 
-  const paginate = (pageNumber) => setCurrentPage(pageNumber)
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
    
   return (
     <>
-      <body className="cardboard-body">
-        {currentCards.map((card) => 
-            <Cards card={card}/>
-        )}
-        
-          
-      
-      </body>
+      <span className="cardboard-container">
+        <span className="cardboard-body">
+          {currentCards.map((card) => 
+              <Cards key={card.id} card={card}/>
+          )}
+        </span>
+      </span>
+     
       <footer className="pagination">
-      <Pagination paginate={paginate} 
-      cardsPerPage={cardsPerPage} 
-      totalCards={cards.length}
-      />
+        <Pagination paginate={paginate} 
+        cardsPerPage={cardsPerPage} 
+        totalCards={cards.length}
+        />
       </footer>
     </>
   );

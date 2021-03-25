@@ -13,10 +13,15 @@
   grid-gap: 1.9rem;
   margin: 60px;
 }
+.cardboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 .pagination ul {
   display: flex;
   list-style: none;
-  margin-left: 38%;
+  margin-left: 69%;
   margin-top: 100px;
 }
 .pagination li + li {

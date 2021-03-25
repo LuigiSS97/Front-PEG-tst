@@ -10,6 +10,7 @@ const Cards = ({card}) => {
   const attachment = card.showAttachment;
   const billTypes = card.billTypes;
 
+
   function getClass(status) {
     if(status === "DELAYED"){
       return "red"
@@ -47,26 +48,29 @@ const Cards = ({card}) => {
         
         <div className="card-data__container">
             
-            {card.billSources.map( billSource =>
-              <div className="card-data__content">
-              <span className="card-data__title">{billSource.label}</span>
-              <h5>{billSource.value}</h5>
+            {card.billSources.map( (billSource) =>
+              <div key={billSource.id} className="card-data__content">
+              <span key={billSource.id} className="card-data__title">{billSource.label}</span>
+              <h5 key={billSource.id}>{billSource.value}</h5>
             </div>)}
         </div>
         
         <div className="card-value__container">
-            <h2 className="card-value">R$ {card.value}</h2>
-            <span className="card-pendencies"><span className="pendencies-value">
-              {card.pendencies}
-            </span>pendências</span>
-          </div>
+          <h2 className="card-value">R$ {card.value}</h2>
+          <span className="card-pendencies"><span className="pendencies-value">
+            {card.pendencies}
+          </span>pendências</span>
+        </div>
       
       </section>
       
       <footer>
         <div className="footer-container">
           <div className="footer-billtags">
-            {billTypes.map( billType =>(<span className="tag">{billType}</span>))}
+            {billTypes.map( (billType) =>(<span key={billType.id} className="tag">
+              {billType}
+              </span>
+            ))}
           </div>
           
           <div className="footer-icons">
