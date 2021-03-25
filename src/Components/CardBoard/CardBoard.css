@@ -1,11 +1,45 @@
+@font-face {
+  font-family: "MyFont";
+  src: local("MyFont"),
+    url(../../assets/fonts/TitilliumWeb-Regular.ttf) format("woff");
+}
+.cardboard-body {
+  width: calc(100vh - 90px);
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding-left: 20px;
+  padding-top: 24px;
+  grid-gap: 1.9rem;
+  margin: 60px;
+}
+.pagination ul {
+  display: flex;
+  list-style: none;
+  margin-left: 38%;
+  margin-top: 100px;
+}
+.pagination li + li {
+  margin-left: 1rem;
+}
+.pagination-buttons {
+  border: none;
+  color: rgb(139, 152, 186);
+  background-color: rgb(246, 247, 251);
+  text-decoration: none;
+  padding: 2px 8px;
+  font-family: "MyFont";
+  border-radius: 5px;
+}
+.pagination-buttons:hover {
+  background-color: rgb(91, 173, 255);
+  color: white;
+}
 
-.cardboard-body{
-    width:calc(100vh - 90px);
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    padding-left: 20px;
-    padding-top: 24px;
-    grid-gap: 1.9rem;
-    margin: 60px;
+.pagination-buttons:active {
+  background-color: rgb(91, 173, 255);
+  color: white;
+}
+.pagination a:hover:not(.active) {
+  background-color: rgb(91, 173, 255);
 }

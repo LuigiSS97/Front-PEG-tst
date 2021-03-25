@@ -3,12 +3,12 @@
   width: 100vw;
   background-color: rgb(246, 247, 251);
   display: flex;
-  -webkit-font-smoothing: antialised !important;
-}
-body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
 }
+
 .body-container__main {
   display: flex;
   flex-direction: column;

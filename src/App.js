@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Sidebar from 'Components/Sidebar/Sidebar'
-import Header from 'Components/Header/Header'
-import CardBoard from 'Components/CardBoard/CardBoard'
+import Sidebar from 'Components/Sidebar/Sidebar';
+import Header from 'Components/Header/Header';
+import CardBoard from 'Components/CardBoard/CardBoard';
 function App() {
   
   return (
@@ -16,7 +16,7 @@ function App() {
           <CardBoard/>
         </div>
         
-      
+        
       </body>
     </>
   );

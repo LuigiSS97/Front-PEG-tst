@@ -1,6 +1,5 @@
 import React, {useState,useEffect} from 'react';
 import "./Header.css";
-import {ReactComponent as ArrowIcon} from '../../assets/images/arrow.svg';
 import DropdownMenu from '../Dropdown/Dropdown';
 import axios from 'axios';
 
