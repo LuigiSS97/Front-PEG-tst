@@ -1,60 +1,37 @@
-[![](/peg-contas.png)]()
+\_\_Teste PEG contas - Luigi Souza Scipioni
 
-# Front end code challenge
-Hello!
+Greetings, PEG HR team. At first, i would like to express how grateful I feel to have the oportunity to be challenged and participate to the recruitment process. I've been working hard for the last ten days in this project and I feel content, because I feel that it was a great oportunitty improve myself as a developer.
 
-Thanks for your interest in joining the team :)
-This is a front end code challenge designed to access the ability of a front-end candidate to create an app using our current technology stack.
+Below, i will tell you guys how to access the project and run it.
 
-We wish you the best of luck!
+I really hope that you enjoy the result of my trully effort!
 
-## Overview 
-Your challenge is to build a vue.js app that reproduce one of ours screen with mocked data. [![](/test-goal.jpg)]()
+\_\_Introduction
 
-## Required
-- Implement layout;
-- Use some features of ES6+;
-- Show us your work through your commit history;
-- Use test server data;
+Developing this project, i concentrated myself to prioritize the features that demanded end-point's interaction as much as the design. At the limited time of ten days, I aimed to:
 
-## Recommendations
-- Use vue-cli to create your project;
-- All the assets you need is in `/assets/` directory;
-- Use any additional library;
+-Do the most responsive design as possible, respecting all the coding conventions. -Show the process of development trough the commits, such as linear and logical stages of development -Make the components to interact to each other to make a clean and readable code, as well as make it easy to understand the cooperation between the components
 
-## Bonus
-- Layout responsiveness;
-- Use any CSS preprocessor;
-- Select of activities;
-> You have to change the route when you select a new activity and show at the url the id of this activity. The same when you change the page
-- Filter "Organizar por:";
-> Must have options ["Prioridade(SLA)" and "Receber documentos"]. When you filter by the first option you have to reorganize the card by the highest value in the variable `days`. In the second filter you have to show only the cards with the property `hasPendingDocument = true`
-- Select all;
-> Must select all checks at the cards that the property `hasPendingDocument = false`
-- Use some state managing solution;
-- Unit tests or any other test you think is important.
-- Host the website on the service of your choice;
+\_\_Architecture
 
-## Evaluation criteria
-- Code organization
-- Code readability
-- Commit history - structure and quality in english
-- Component-based structure
-- Reusable Components
-- Libraries used
-- ES6 features
-- Vue Conventions
+I used React Js as framework to state managing and used the hooks to make a clean code. In addition to it, i used some libs: axios,json server, json, react router.
 
-## How to run test server
-- Install npm package with terminal command `yarn` or `npm install`
-- Run server with terminal command `yarn server` or `npm run server`
-- Keep the terminal open when you use the test server, it will show you the routes.
-> It's possible to complete the test with routes `/activities` and `/activity/:activityId/cards`, but you can also use: `/activity/:activityId` and `/cards`
+\_\_About some design choices
 
-## Submission instructions
-1. Create a GitHub repository for the test;
-2. Create a new readme file with the instructions to run the project, and add any comments that you think is relevant;
-3. You can make the repository public or enable access for our devs: dsnjunior or edim.
+I first noted that the .jpg of the test goal wasn't a widescreen printscreen, so I decided to make a grid of four columns instead of three, with the intention to improve de user experience by making the content fit in the 16:9 screens. As a second decision, I made a separated component to the card board, to make it better to customize and to avoid huge amount of code lines in a single file.
 
-## Questions? 
-> If you have any questions, you can create an issue on our repository and we will clear things up for you :)
+\_\_Follow the recommendations below to run the project
+
+-at the vs terminal run: cd front-test
+
+-git bash at ./server and run: yarn start / npm start
+
+-at the vs terminal run: yarn start
+
+\_\_Conclusion
+
+The following bonus requirements were accomplished -- Layout responsiveness; -- Select of activities; -- Use some state managing solution; --Pagination
+
+I chose not to implement the filtering ["Prioridade(SLA)" and "Receber documentos"] because of lack of time, my main professional objective is to become more efficient by studying and working as a developer. I really believe that maximum effort can make my life better, so I decided to study front-end developing, which became my passion, and apply to this opportunitty.
+
+Once again, thank you!
